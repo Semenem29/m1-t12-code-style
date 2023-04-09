@@ -37,7 +37,7 @@ public class DepositCalculator {
 
         System.out.println("Введите срок вклада в годах:");
         period = scanner.nextInt();
-        //TODO Нужно ли пропускать тут строки?? Ну в любом случае, так красивее))
+        //TODO Нужно ли пропускать тут строки?? Ну в любом случае, так красивее)))
         System.out.println("Выберите тип вклада, 1 - вклад с обычным процентом, 2 - вклад с капитализацией:");
         action = scanner.nextInt();
         
