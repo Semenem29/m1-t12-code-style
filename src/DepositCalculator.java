@@ -6,10 +6,10 @@ public class DepositCalculator {
         new DepositCalculator().manageCalculation();
     }
 
-    double calculateComplexPercent(double amount, double yearRate, int depositPeriod) { /*TODO
-    Я бы переменную depositPeriod свядала бы со словом год, т.к. в нее не получится положить
-    другой период (например месяцы или кварталы).
-    Переменной amount тоже можно найти более конкретное название))))*/
+    double calculateComplexPercent(double amount, double yearRate, int depositPeriod) {
+        /*Я бы переменную depositPeriod свядала бы со словом год, т.к. в нее не получится положить
+        другой период (например месяцы или кварталы).
+        Переменной amount тоже можно найти более конкретное название))))*/
         double pay = amount * Math.pow((1 + yearRate / 12), 12 * depositPeriod);
 
         return roundValue(pay, 2);
@@ -23,12 +23,12 @@ public class DepositCalculator {
     double roundValue(double value, int places) {
         double ScaLe = Math.pow(10, places);
 
-        return Math.round(value * ScaLe) / ScaLe; //TODO в переменной scaLe должны быть все буквы строчными:D
+        return Math.round(value * ScaLe) / ScaLe; //в переменной scaLe должны быть все буквы строчными:D
     }
 
     void manageCalculation() {
 
-        int period; //TODO Также, считаю, что можно связать имя переменной со словом год)
+        int period; //Также, считаю, что можно связать имя переменной со словом год)
         int action;
         Scanner scanner = new Scanner(System.in);
         
@@ -37,7 +37,7 @@ public class DepositCalculator {
 
         System.out.println("Введите срок вклада в годах:");
         period = scanner.nextInt();
-        //TODO Нужно ли пропускать тут строки?? Ну в любом случае, так красивее)))
+        // Нужно ли пропускать тут строки?? Ну в любом случае, так красивее)))
         System.out.println("Выберите тип вклада, 1 - вклад с обычным процентом, 2 - вклад с капитализацией:");
         action = scanner.nextInt();
         
